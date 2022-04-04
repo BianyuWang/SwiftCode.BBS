@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftCode.BBS.API", "SwiftCode.BBS.API\SwiftCode.BBS.API.csproj", "{E0D2B03C-7BD4-4999-90CA-191B15601995}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0D2B03C-7BD4-4999-90CA-191B15601995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0D2B03C-7BD4-4999-90CA-191B15601995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0D2B03C-7BD4-4999-90CA-191B15601995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0D2B03C-7BD4-4999-90CA-191B15601995}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {55A417D8-5A46-4C20-B9A5-7F203FB46DE9}
+	EndGlobalSection
+EndGlobal
