@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftCode.BBS.API", "SwiftCode.BBS.API\SwiftCode.BBS.API.csproj", "{E0D2B03C-7BD4-4999-90CA-191B15601995}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwiftCode.BBS.API", "SwiftCode.BBS.API\SwiftCode.BBS.API.csproj", "{E0D2B03C-7BD4-4999-90CA-191B15601995}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwiftCode.BBS.IRepositories", "SwiftCode.BBS.IRepositories\SwiftCode.BBS.IRepositories.csproj", "{A730B873-4D1D-4B41-B4F0-6315F541489C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwiftCode.BBS.Repositories", "Repositories\SwiftCode.BBS.Repositories.csproj", "{3C7EFD64-81F1-40BD-BD13-1C4BE329DEA8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwiftCode.BBS.IServices", "SwiftCode.BBS.IServices\SwiftCode.BBS.IServices.csproj", "{7A4A437A-4EC8-44F0-AF96-C254F7D419A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwiftCode.BBS.Services", "SwiftCode.BBS.Services\SwiftCode.BBS.Services.csproj", "{A187D5A8-4BDB-44D7-B0A8-A9DCC7ED4E21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftCode.BBS.Model", "SwiftCode.BBS.Model\SwiftCode.BBS.Model.csproj", "{9A22281A-B221-484C-97CA-4CEB8FD20A65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftCode.BBS.Common", "SwiftCode.BBS.Common\SwiftCode.BBS.Common.csproj", "{75248A82-AB63-4270-9A29-79141724FEB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +27,30 @@ Global
 		{E0D2B03C-7BD4-4999-90CA-191B15601995}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0D2B03C-7BD4-4999-90CA-191B15601995}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0D2B03C-7BD4-4999-90CA-191B15601995}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A730B873-4D1D-4B41-B4F0-6315F541489C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A730B873-4D1D-4B41-B4F0-6315F541489C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A730B873-4D1D-4B41-B4F0-6315F541489C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A730B873-4D1D-4B41-B4F0-6315F541489C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C7EFD64-81F1-40BD-BD13-1C4BE329DEA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C7EFD64-81F1-40BD-BD13-1C4BE329DEA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C7EFD64-81F1-40BD-BD13-1C4BE329DEA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C7EFD64-81F1-40BD-BD13-1C4BE329DEA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A4A437A-4EC8-44F0-AF96-C254F7D419A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A4A437A-4EC8-44F0-AF96-C254F7D419A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A4A437A-4EC8-44F0-AF96-C254F7D419A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A4A437A-4EC8-44F0-AF96-C254F7D419A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A187D5A8-4BDB-44D7-B0A8-A9DCC7ED4E21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A187D5A8-4BDB-44D7-B0A8-A9DCC7ED4E21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A187D5A8-4BDB-44D7-B0A8-A9DCC7ED4E21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A187D5A8-4BDB-44D7-B0A8-A9DCC7ED4E21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A22281A-B221-484C-97CA-4CEB8FD20A65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A22281A-B221-484C-97CA-4CEB8FD20A65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A22281A-B221-484C-97CA-4CEB8FD20A65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A22281A-B221-484C-97CA-4CEB8FD20A65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75248A82-AB63-4270-9A29-79141724FEB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75248A82-AB63-4270-9A29-79141724FEB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75248A82-AB63-4270-9A29-79141724FEB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75248A82-AB63-4270-9A29-79141724FEB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

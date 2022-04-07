@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SwiftCode.BBS.Model</name>
+    </assembly>
+    <members>
+        <member name="T:SwiftCode.BBS.API.WeatherForecast">
+            <summary>
+            weather forecase
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.API.WeatherForecast.Date">
+            <summary>
+            date
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.API.WeatherForecast.TemperatureC">
+            <summary>
+            temprature in celsius
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.API.WeatherForecast.TemperatureF">
+            <summary>
+            temperature in fahrenheit
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.API.WeatherForecast.Summary">
+            <summary>
+            summary
+            </summary>
+        </member>
+    </members>
+</doc>
