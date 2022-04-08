@@ -19,7 +19,7 @@ namespace SwiftCode.BBS.Common.Helper
         /// <returns></returns>
 
         public static string IssueJWT(TokenModelJWT tokenModel) {
-            string iss = Appsettings.app(new string[] { "Audience", "Issier" });
+            string iss = Appsettings.app(new string[] { "Audience", "Issuer" });
             string aud = Appsettings.app(new string[] { "Audience", "Audience" });
             string secret = Appsettings.app(new string[] { "Audience", "Secret" });
 
@@ -76,11 +76,11 @@ namespace SwiftCode.BBS.Common.Helper
                     Role = role == null ? "" : role.ToString()
 
                 };
-            
-            
+
+
             }
             return tokenModelJWT;
-        
+
         }
     }
 

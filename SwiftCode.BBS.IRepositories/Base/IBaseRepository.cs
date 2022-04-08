@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace SwiftCode.BBS.IRepositories.Base
+{
+  public  interface IBaseRepository<TEntity> where TEntity :class
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="entity">entity</param>
+        /// <param name="autoSave">if save to database right away</param>
+        /// <param name="cancellationToke">取消令牌，如果是取消状态，task内部没有启动的任务不会启动新线程</param>
+        /// <returns></returns>
+        Task<TEntity> InsertAsync(TEntity entity, bool autoSave = false, CancellationToken cancellationToke = default);
+        Task InsertManyAsync(IEnumerable<TEntity> entity, bool autoSave = false, CancellationToken cancellationToke = default);
+
+        Task<TEntity> UpdateAsync(TEntity entity, bool autoSave = false, CancellationToken cancellationToke = default);
+        Task UpdateManyAsync(IEnumerable<TEntity> entity, bool autoSave = false, CancellationToken cancellationToke = default);
+        Task DeleteAsync(TEntity entity, bool autoSave = false, CancellationToken cancellationToken = default);
+        Task DeleteAsync(Expression<Func<TEntity, bool>> predicate, bool autoSave = false, CancellationToken cancellationToken = default);
+        Task DeleteManyAsync(IEnumerable<TEntity> entities, bool autoSave = false, CancellationToken cancellationToken = default);
+        Task<TEntity> FindAsync(Expression<Func<TEntity, bool>> predicate, CancellationToken cancellationToken = default);
+
+        Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> predicate, CancellationToken cancellationToken = default);
+
+        Task<List<TEntity>> GetListAsync(CancellationToken cancellationToken = default);
+
+        Task<List<TEntity>> GetListAsync(Expression<Func<TEntity, bool>> predicate, CancellationToken cancellationToken = default);
+
+        Task<List<TEntity>> GetPagedListAsync(int skipCount, int maxResultCount, string sorting, CancellationToken cancellationToken = default);
+
+        Task<long> GetCountAsync(CancellationToken cancellationToken = default);
+
+        Task<long> GetCountAsync(Expression<Func<TEntity, bool>> predicate, CancellationToken cancellationToken);
+
+    }
+}

@@ -13,9 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwiftCode.BBS.IServices", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwiftCode.BBS.Services", "SwiftCode.BBS.Services\SwiftCode.BBS.Services.csproj", "{A187D5A8-4BDB-44D7-B0A8-A9DCC7ED4E21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftCode.BBS.Model", "SwiftCode.BBS.Model\SwiftCode.BBS.Model.csproj", "{9A22281A-B221-484C-97CA-4CEB8FD20A65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwiftCode.BBS.Model", "SwiftCode.BBS.Model\SwiftCode.BBS.Model.csproj", "{9A22281A-B221-484C-97CA-4CEB8FD20A65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftCode.BBS.Common", "SwiftCode.BBS.Common\SwiftCode.BBS.Common.csproj", "{75248A82-AB63-4270-9A29-79141724FEB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwiftCode.BBS.Common", "SwiftCode.BBS.Common\SwiftCode.BBS.Common.csproj", "{75248A82-AB63-4270-9A29-79141724FEB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftCode.BBS.EntityFramework", "SwiftCode.BBS.EntityFramework\SwiftCode.BBS.EntityFramework.csproj", "{226D40BA-B2ED-4273-BEAE-D34ED486138B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{75248A82-AB63-4270-9A29-79141724FEB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75248A82-AB63-4270-9A29-79141724FEB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75248A82-AB63-4270-9A29-79141724FEB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{226D40BA-B2ED-4273-BEAE-D34ED486138B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{226D40BA-B2ED-4273-BEAE-D34ED486138B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{226D40BA-B2ED-4273-BEAE-D34ED486138B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{226D40BA-B2ED-4273-BEAE-D34ED486138B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

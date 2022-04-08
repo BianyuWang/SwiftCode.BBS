@@ -4,6 +4,21 @@
         <name>SwiftCode.BBS.API</name>
     </assembly>
     <members>
+        <member name="M:SwiftCode.BBS.API.Controllers.ArticleController.Get(System.Int32)">
+            <summary>
+            get article by id 
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SwiftCode.BBS.API.Controllers.CalculateController.Get(System.Int32,System.Int32)">
+            <summary>
+            Sum接口
+            </summary>
+            <param name="i">参数i</param>
+            <param name="j">参数j</param>
+            <returns></returns>
+        </member>
         <member name="M:SwiftCode.BBS.API.Controllers.LoginController.GetJwtStr(System.String,System.String)">
             <summary>
             获取Jwt令牌
@@ -15,13 +30,13 @@
         <member name="T:SwiftCode.BBS.API.Controllers.WeatherForecastController">
             <summary>
             天气预报
-             </summary>
+            </summary>
         </member>
         <member name="M:SwiftCode.BBS.API.Controllers.WeatherForecastController.Get">
             <summary>
-            得到温度
-             </summary>
-             <return></return>
+            获取天气
+            </summary>
+            <returns></returns>
         </member>
     </members>
 </doc>

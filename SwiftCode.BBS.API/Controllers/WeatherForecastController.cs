@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,21 +8,16 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace SwiftCode.BBS.API.Controllers
-
-    
-{
-    ///<summary>
-    ///天气预报
-    /// </summary>
-
+{    /// <summary>
+     /// 天气预报
+     /// </summary>
+    [Route("api/[controller]")]
     [ApiController]
-[Route("controller")]
-    public class WeatherForecastController : Controller
+    public class WeatherForecastController : ControllerBase
     {
-
         private static readonly string[] Summaries = new[]
-        {
-          "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+      {
+            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
@@ -30,13 +26,12 @@ namespace SwiftCode.BBS.API.Controllers
         {
             _logger = logger;
         }
-
-        ///<summary>
-        ///得到温度
+        /// <summary>
+        /// 获取天气
         /// </summary>
-        /// <return></return>
+        /// <returns></returns>
         [HttpGet]
-        [Authorize]
+        [Authorize(Policy = "SystemOrAdmin")]
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();
@@ -45,7 +40,8 @@ namespace SwiftCode.BBS.API.Controllers
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = rng.Next(-20, 55),
                 Summary = Summaries[rng.Next(Summaries.Length)]
-            }).ToArray();
+            })
+            .ToArray();
         }
     }
 }
