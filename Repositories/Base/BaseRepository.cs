@@ -21,9 +21,9 @@ namespace SwiftCode.BBS.Repositories.Base
 
         private  SwiftCodeBBSContext _dbContext;
 
-        public BaseRepository()
+        public BaseRepository(SwiftCodeBBSContext dbContext)
         {
-            _dbContext = new SwiftCodeBBSContext();
+            _dbContext = dbContext;
 
         }
         

@@ -13,9 +13,9 @@ namespace SwiftCode.BBS.Repositories
 {
     public class ArticalRepository :BaseRepository<Article>, IArticleRepository
     {
-        //public ArticalRepository(SwiftCodeBBSContext context) : base(context)
-        //{
-        //}
+        public ArticalRepository(SwiftCodeBBSContext context) : base(context)
+        {
+        }
 
 
         //private SwiftCodeBBSContext dbcontext;
