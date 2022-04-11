@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SwiftCode.BBS.Common\SwiftCode.BBS.Common.csproj" />
+    <ProjectReference Include="..\SwiftCode.BBS.Extensions\SwiftCode.BBS.Extensions.csproj" />
     <ProjectReference Include="..\SwiftCode.BBS.Services\SwiftCode.BBS.Services.csproj" />
   </ItemGroup>
 

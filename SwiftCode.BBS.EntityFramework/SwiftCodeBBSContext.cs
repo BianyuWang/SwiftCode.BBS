@@ -11,8 +11,9 @@ namespace SwiftCode.BBS.EntityFramework
 {
    public class SwiftCodeBBSContext :DbContext
     {
-        public SwiftCodeBBSContext() : base()
+        public SwiftCodeBBSContext()
         {
+
         }
         public SwiftCodeBBSContext(DbContextOptions<SwiftCodeBBSContext> options )
             :base(options)

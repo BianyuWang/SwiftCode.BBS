@@ -4,8 +4,11 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\SwiftCode.BBS.API\bin\Debug\</OutputPath>
+  </PropertyGroup>
+
   <ItemGroup>
-    <PackageReference Include="EntityFramework" Version="5.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.5">
       <PrivateAssets>all</PrivateAssets>
@@ -17,6 +20,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.2" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.18" />
   </ItemGroup>
 
   <ItemGroup>

@@ -11,14 +11,6 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:SwiftCode.BBS.API.Controllers.CalculateController.Get(System.Int32,System.Int32)">
-            <summary>
-            Sum接口
-            </summary>
-            <param name="i">参数i</param>
-            <param name="j">参数j</param>
-            <returns></returns>
-        </member>
         <member name="M:SwiftCode.BBS.API.Controllers.LoginController.GetJwtStr(System.String,System.String)">
             <summary>
             获取Jwt令牌

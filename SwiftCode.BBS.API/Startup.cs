@@ -16,6 +16,10 @@ using Swashbuckle.AspNetCore.Filters;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
+using Autofac;
+using SwiftCode.BBS.Extensions.ServiceExtension;
+using SwiftCode.BBS.IServices;
+
 
 namespace SwiftCode.BBS.API
 {
@@ -33,6 +37,8 @@ namespace SwiftCode.BBS.API
         {
             services.AddControllers();
             services.AddSingleton(new Appsettings(Configuration));
+
+         //   services.AddScoped<IArticleService, ArticleServices>();
             services.AddRazorPages();
             
             services.AddSwaggerGen(c =>
@@ -124,6 +130,10 @@ namespace SwiftCode.BBS.API
 
 
         }
+        //   public void ConfigureContainer(ContainerBuilder builder)
+        //{
+        //    builder.RegisterModule<AutofacModuleRegister>();
+        //}
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -164,5 +174,7 @@ namespace SwiftCode.BBS.API
                 endpoints.MapControllers();
             });
         }
+
+     
     }
 }
