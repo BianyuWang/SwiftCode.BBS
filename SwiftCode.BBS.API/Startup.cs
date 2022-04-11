@@ -130,12 +130,12 @@ namespace SwiftCode.BBS.API
 
 
         }
-        //   public void ConfigureContainer(ContainerBuilder builder)
-        //{
-        //    builder.RegisterModule<AutofacModuleRegister>();
-        //}
+        public void ConfigureContainer(ContainerBuilder builder)
+        {
+            builder.RegisterModule<AutofacModuleRegister>();
+        }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+     //   This method gets called by the runtime.Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

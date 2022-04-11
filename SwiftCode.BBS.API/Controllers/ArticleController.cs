@@ -17,25 +17,25 @@ namespace SwiftCode.BBS.API.Controllers
     [ApiController]
     public class ArticleController : ControllerBase
     {
-        //private readonly IArticleService _articleService;
-        //public ArticleController(IArticleService articleService)
-        //{
-        //    _articleService = articleService;
-        //}
-        
-        
-        
+        private readonly IArticleService _articleService;
+        public ArticleController(IArticleService articleService)
+        {
+            _articleService = articleService;
+        }
+
+
+
         /// <summary>
-    /// get article by id 
-    /// </summary>
-    /// <param name="id"></param>
-    /// <returns></returns>
-    
+        /// get article by id 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+
         [HttpGet("{id}", Name = "Get")]
         public async Task<Article> Get(int id)
         {
-            IArticleService artileService = new ArticleServices();
-            return await artileService.GetAsync(a => a.Id == id);
+          //  IArticleService artileService = new ArticleServices();
+            return await _articleService.GetAsync(a => a.Id == id);
 
         }
     }

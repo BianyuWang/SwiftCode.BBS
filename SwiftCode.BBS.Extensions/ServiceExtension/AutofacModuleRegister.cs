@@ -1,6 +1,6 @@
 using Autofac;
 using SwiftCode.BBS.IServices;
-
+using SwiftCode.BBS.Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,7 +15,7 @@ namespace SwiftCode.BBS.Extensions.ServiceExtension
     {
         protected override void Load(ContainerBuilder builder)
         {
-        // builder.RegisterType<ArticleServices>().As<IArticleService>();
+      builder.RegisterType<ArticleServices>().As<IArticleService>();
             var basepath = AppContext.BaseDirectory;
 
             //var assemblysService = Assembly.Load("SwiftCode.BBS.Services");
@@ -23,19 +23,19 @@ namespace SwiftCode.BBS.Extensions.ServiceExtension
             //var assemblysRepository = Assembly.Load("SwiftCode.BBS.Repositories");
             //builder.RegisterAssemblyTypes(assemblysRepository).AsImplementedInterfaces();
 
-            var serviceDllFile = Path.Combine(basepath, "SwiftCode.BBS.Services.dll");
-            var repositoryDllFile = Path.Combine(basepath, "SwiftCode.BBS.Repositories.dll");
-            if (!(File.Exists(serviceDllFile) && File.Exists(repositoryDllFile)))
-            {
+            //var serviceDllFile = Path.Combine(basepath, "SwiftCode.BBS.Services.dll");
+            //var repositoryDllFile = Path.Combine(basepath, "SwiftCode.BBS.Repositories.dll");
+            //if (!(File.Exists(serviceDllFile) && File.Exists(repositoryDllFile)))
+            //{
 
-                var msg = "could not find service.dll and repository.dll";
-                throw new Exception(msg);
-            }
+            //    var msg = "could not find service.dll and repository.dll";
+            //    throw new Exception(msg);
+            //}
 
-            var assmblysServices = Assembly.LoadFrom(serviceDllFile);
-            builder.RegisterAssemblyTypes(assmblysServices).AsImplementedInterfaces();
-            var assemblysRepository = Assembly.LoadFrom(repositoryDllFile);
-            builder.RegisterAssemblyTypes(assemblysRepository).AsImplementedInterfaces();
+            //var assmblysServices = Assembly.LoadFrom(serviceDllFile);
+            //builder.RegisterAssemblyTypes(assmblysServices).AsImplementedInterfaces();
+            //var assemblysRepository = Assembly.LoadFrom(repositoryDllFile);
+            //builder.RegisterAssemblyTypes(assemblysRepository).AsImplementedInterfaces();
 
         }
     }
