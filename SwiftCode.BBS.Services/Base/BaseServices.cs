@@ -1,6 +1,6 @@
 using SwiftCode.BBS.IRepositories.Base;
 using SwiftCode.BBS.IServices.Base;
-using SwiftCode.BBS.Repositories.Base;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,17 +15,19 @@ namespace SwiftCode.BBS.Services.Base
     {
 
 
-        public IBaseRepository<TEntity> _baseRepository = new BaseRepository<TEntity>();
+        public IBaseRepository<TEntity> _baseRepository;
 
-        public BaseServices()
+        public BaseServices(IBaseRepository<TEntity> baseRepository)
         {
-            _baseRepository = new BaseRepository<TEntity>();
-
+            _baseRepository = baseRepository;
         }
-        //public BaseServices(IBaseRepository<TEntity> baseRepository)
+
+        //public BaseServices()
         //{
-        //    _baseRepository = baseRepository;
+        //    _baseRepository = new BaseRepository<TEntity>();
+
         //}
+
         public async Task DeleteAsync(TEntity entity, bool autoSave = false, CancellationToken cancellationToken = default)
         {
            await _baseRepository.DeleteAsync(entity, autoSave, cancellationToken);

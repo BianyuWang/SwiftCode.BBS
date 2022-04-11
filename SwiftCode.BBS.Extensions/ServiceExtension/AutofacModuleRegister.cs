@@ -15,13 +15,13 @@ namespace SwiftCode.BBS.Extensions.ServiceExtension
     {
         protected override void Load(ContainerBuilder builder)
         {
-      builder.RegisterType<ArticleServices>().As<IArticleService>();
+   //   builder.RegisterType<ArticleServices>().As<IArticleService>();
             var basepath = AppContext.BaseDirectory;
 
-            //var assemblysService = Assembly.Load("SwiftCode.BBS.Services");
-            //builder.RegisterAssemblyTypes(assemblysService).AsImplementedInterfaces();
-            //var assemblysRepository = Assembly.Load("SwiftCode.BBS.Repositories");
-            //builder.RegisterAssemblyTypes(assemblysRepository).AsImplementedInterfaces();
+            var assemblysService = Assembly.Load("SwiftCode.BBS.Services");
+            builder.RegisterAssemblyTypes(assemblysService).AsImplementedInterfaces();
+            var assemblysRepository = Assembly.Load("SwiftCode.BBS.Repositories");
+            builder.RegisterAssemblyTypes(assemblysRepository).AsImplementedInterfaces();
 
             //var serviceDllFile = Path.Combine(basepath, "SwiftCode.BBS.Services.dll");
             //var repositoryDllFile = Path.Combine(basepath, "SwiftCode.BBS.Repositories.dll");
