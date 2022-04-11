@@ -34,11 +34,6 @@
             artical on BBS
             </summary>
         </member>
-        <member name="P:SwiftCode.BBS.Model.Models.Article.Id">
-            <summary>
-            Primary key
-            </summary>
-        </member>
         <member name="P:SwiftCode.BBS.Model.Models.Article.Submitter">
             <summary>
             who create this artical
@@ -87,6 +82,97 @@
         <member name="P:SwiftCode.BBS.Model.Models.Article.IsDeleted">
             <summary>
             available to users
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.ArticleComment.Content">
+            <summary>
+            content of comment
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.ArticleComment.CreateTime">
+            <summary>
+            time of creation
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.ArticleComment.CreateUserId">
+            <summary>
+            for create by userId
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.ArticleComment.CreateUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SwiftCode.BBS.Model.Models.RootEntityTKey`1">
+            <summary>
+            Generics class
+            </summary>
+            <typeparam name="Tkey"></typeparam>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.RootEntityTKey`1.Id">
+            <summary>
+            id -- primary key of Generics class
+            </summary>
+        </member>
+        <member name="T:SwiftCode.BBS.Model.Models.RootKey.UserCollectionArticle">
+            <summary>
+            Link model -- UserInfor and Article
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.RootKey.UserCollectionArticle.UserId">
+            <summary>
+            foreign key -- UsereId from UserInfo
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.RootKey.UserCollectionArticle.ArticleId">
+            <summary>
+            foreign key -- ArticleId from Article
+            </summary>
+        </member>
+        <member name="T:SwiftCode.BBS.Model.Models.UserInfo">
+            <summary>
+            user information
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.UserInfo.UserName">
+            <summary>
+            User Name
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.UserInfo.LoginName">
+            <summary>
+            Login Name
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.UserInfo.LoginPassword">
+            <summary>
+            Login password
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.UserInfo.Phone">
+            <summary>
+            user phone number
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.UserInfo.Introduction">
+            <summary>
+            presonnal introduction
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.UserInfo.Email">
+            <summary>
+            Email address
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.UserInfo.Avatar">
+            <summary>
+            avatar image
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.UserInfo.CreateTime">
+            <summary>
+            time of create
             </summary>
         </member>
         <member name="T:SwiftCode.BBS.Model.TableModel`1">

@@ -8,12 +8,9 @@ namespace SwiftCode.BBS.Model.Models
 {/// <summary>
 /// artical on BBS
 /// </summary>
-  public  class Article
+  public  class Article: RootEntityTKey<int>
     {
-        /// <summary>
-        /// Primary key
-        /// </summary>
-        public int Id { get; set; }
+       
         /// <summary>
         /// who create this artical
         /// </summary>
