@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Http;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
@@ -81,6 +82,19 @@ namespace SwiftCode.BBS.Common.Helper
             }
             return tokenModelJWT;
 
+        }
+        /// <summary>
+        /// 授权解析jwt
+        /// </summary>
+        /// <param name="httpContext"></param>
+        /// <returns></returns>
+        public static TokenModelJWT ParsingJwtToken(HttpContext httpContext)
+        {
+            if (!httpContext.Request.Headers.ContainsKey("Authorization"))
+                return null;
+            var tokenHeader = httpContext.Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
+            TokenModelJWT tm = SerializeJMT(tokenHeader);
+            return tm;
         }
     }
 

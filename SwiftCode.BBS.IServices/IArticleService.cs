@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SwiftCode.BBS.IServices
@@ -15,5 +16,9 @@ namespace SwiftCode.BBS.IServices
         //void Delete(Article model);
         //void Update(Article model);
         //List<Article> Query(Expression<Func<Article,bool>> whereExpression);
+        Task<Article> GetByIdAsync(int id, CancellationToken cancellationToken = default);
+
+        Task<Article> GetArticleDetailsAsync(int id, CancellationToken cancellationToken = default);
+
     }
 }
