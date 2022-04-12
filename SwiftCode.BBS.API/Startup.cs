@@ -19,6 +19,8 @@ using Microsoft.IdentityModel.Tokens;
 using Autofac;
 using SwiftCode.BBS.Extensions.ServiceExtension;
 using SwiftCode.BBS.IServices;
+using SwiftCode.BBS.EntityFramework;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace SwiftCode.BBS.API
@@ -36,9 +38,17 @@ namespace SwiftCode.BBS.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+      
+
+
+            services.AddDbContext<SwiftCodeBBSContext>(o=>
+            o.UseLazyLoadingProxies().UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MySwiftCodeBBS;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False",
+            oo => oo.MigrationsAssembly("SwiftCode.BBS.EntityFramework")));
+
             services.AddSingleton(new Appsettings(Configuration));
 
-         //   services.AddScoped<IArticleService, ArticleServices>();
+            services.AddAutoMapperSetup();
+            //   services.AddScoped<IArticleService, ArticleServices>();
             services.AddRazorPages();
             
             services.AddSwaggerGen(c =>

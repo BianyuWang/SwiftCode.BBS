@@ -29,24 +29,39 @@
             返回数据集合
             </summary>
         </member>
+        <member name="T:SwiftCode.BBS.Model.Models.Advertisement">
+            <summary>
+            ad 
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.Advertisement.ImgUrl">
+            <summary>
+            image of advertise
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.Advertisement.Url">
+            <summary>
+            url
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.Advertisement.CreateTime">
+            <summary>
+            time of creation
+            </summary>
+        </member>
         <member name="T:SwiftCode.BBS.Model.Models.Article">
             <summary>
             artical on BBS
             </summary>
         </member>
-        <member name="P:SwiftCode.BBS.Model.Models.Article.Submitter">
-            <summary>
-            who create this artical
-            </summary>
-        </member>
         <member name="P:SwiftCode.BBS.Model.Models.Article.Title">
             <summary>
-            title of this artical
+            title
             </summary>
         </member>
-        <member name="P:SwiftCode.BBS.Model.Models.Article.Category">
+        <member name="P:SwiftCode.BBS.Model.Models.Article.Cover">
             <summary>
-            category
+            cover
             </summary>
         </member>
         <member name="P:SwiftCode.BBS.Model.Models.Article.Content">
@@ -54,19 +69,14 @@
             content
             </summary>
         </member>
+        <member name="P:SwiftCode.BBS.Model.Models.Article.Tag">
+            <summary>
+            category
+            </summary>
+        </member>
         <member name="P:SwiftCode.BBS.Model.Models.Article.Traffic">
             <summary>
-            how many readers
-            </summary>
-        </member>
-        <member name="P:SwiftCode.BBS.Model.Models.Article.CommentNum">
-            <summary>
-            comment count 
-            </summary>
-        </member>
-        <member name="P:SwiftCode.BBS.Model.Models.Article.UpdateTime">
-            <summary>
-            last update time
+            count of traffic4
             </summary>
         </member>
         <member name="P:SwiftCode.BBS.Model.Models.Article.CreateTime">
@@ -74,14 +84,24 @@
             create time
             </summary>
         </member>
-        <member name="P:SwiftCode.BBS.Model.Models.Article.Mark">
+        <member name="P:SwiftCode.BBS.Model.Models.Article.CreateUserId">
             <summary>
-            #marks
+            create by user id
             </summary>
         </member>
-        <member name="P:SwiftCode.BBS.Model.Models.Article.IsDeleted">
+        <member name="P:SwiftCode.BBS.Model.Models.Article.CreateUser">
             <summary>
-            available to users
+            create by user
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.Article.CollectionArticles">
+            <summary>
+            collected by user
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.Article.ArticleComments">
+            <summary>
+            commented by user
             </summary>
         </member>
         <member name="P:SwiftCode.BBS.Model.Models.ArticleComment.Content">
@@ -96,12 +116,107 @@
         </member>
         <member name="P:SwiftCode.BBS.Model.Models.ArticleComment.CreateUserId">
             <summary>
-            for create by userId
+            foreign key --- create by userId
             </summary>
         </member>
         <member name="P:SwiftCode.BBS.Model.Models.ArticleComment.CreateUser">
             <summary>
-            
+            who create this comment
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.ArticleComment.ArticleId">
+            <summary>
+            foreign key --- comment of article Id
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.ArticleComment.Article">
+            <summary>
+            which article is this comment for
+            </summary>
+        </member>
+        <member name="T:SwiftCode.BBS.Model.Models.Question">
+            <summary>
+            questions
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.Question.Title">
+            <summary>
+            title pf question
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.Question.Content">
+            <summary>
+            content
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.Question.Tag">
+            <summary>
+            tag,categorie of question
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.Question.Traffic">
+            <summary>
+            traffic of view
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.Question.CreateTime">
+            <summary>
+            time of creation
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.Question.CreateUserId">
+            <summary>
+            id of who create this question
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.Question.CreateUser">
+            <summary>
+            who create this question
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.Question.QuestionComments">
+            <summary>
+            list of comments of this question
+            </summary>
+        </member>
+        <member name="T:SwiftCode.BBS.Model.Models.QuestionComment">
+            <summary>
+            question comment
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.QuestionComment.Content">
+            <summary>
+            content
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.QuestionComment.CreateTime">
+            <summary>
+            time of creation
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.QuestionComment.IsAdoption">
+            <summary>
+            is adopte by create
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.QuestionComment.CreateUserId">
+            <summary>
+            id of who create this comment
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.QuestionComment.CreateUser">
+            <summary>
+            who create this comment
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.QuestionComment.QuestionId">
+            <summary>
+            the comment is for which question (id)
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.Models.QuestionComment.Question">
+            <summary>
+            the comment is for which question 
             </summary>
         </member>
         <member name="T:SwiftCode.BBS.Model.Models.RootEntityTKey`1">
@@ -199,6 +314,446 @@
         <member name="P:SwiftCode.BBS.Model.TableModel`1.Data">
             <summary>
             返回数据集合
+            </summary>
+        </member>
+        <member name="T:SwiftCode.BBS.Model.ViewModels.Article.ArticleCommentDto">
+            <summary>
+            article comment view model
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.ArticleCommentDto.Content">
+            <summary>
+            content
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.ArticleCommentDto.CreateTime">
+            <summary>
+            create time
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.ArticleCommentDto.CreateUserId">
+            <summary>
+            who create this article
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.ArticleCommentDto.UserName">
+            <summary>
+            user name
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.ArticleCommentDto.Avatar">
+            <summary>
+            image
+            </summary>
+        </member>
+        <member name="T:SwiftCode.BBS.Model.ViewModels.Article.ArticleDetailsDto">
+            <summary>
+            article details 
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.ArticleDetailsDto.Title">
+            <summary>
+            title
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.ArticleDetailsDto.Cover">
+            <summary>
+            cover
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.ArticleDetailsDto.Content">
+            <summary>
+            content
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.ArticleDetailsDto.Tag">
+            <summary>
+            category
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.ArticleDetailsDto.Traffic">
+            <summary>
+            count of traffic
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.ArticleDetailsDto.CreateTime">
+            <summary>
+            create time
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.ArticleDetailsDto.CreateUserId">
+            <summary>
+            by user id
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.ArticleDetailsDto.ArticleComments">
+            <summary>
+            list of comments
+            </summary>
+        </member>
+        <member name="T:SwiftCode.BBS.Model.ViewModels.Article.ArticleDto">
+            <summary>
+            article view model
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.ArticleDto.Title">
+            <summary>
+            title
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.ArticleDto.Cover">
+            <summary>
+            cover
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.ArticleDto.Content">
+            <summary>
+            content
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.ArticleDto.Tag">
+            <summary>
+            category
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.ArticleDto.CreateTime">
+            <summary>
+            create time
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.ArticleDto.CreateUserId">
+            <summary>
+            by user id
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.ArticleDto.UserName">
+            <summary>
+            by user name
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.ArticleDto.Avatar">
+            <summary>
+            image
+            </summary>
+        </member>
+        <member name="T:SwiftCode.BBS.Model.ViewModels.Article.CreateArticleCommentsInputDto">
+            <summary>
+            create new Article 
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.CreateArticleCommentsInputDto.Content">
+            <summary>
+            content
+            </summary>
+        </member>
+        <member name="T:SwiftCode.BBS.Model.ViewModels.Article.CreateArticleInputDto">
+            <summary>
+            create article
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.CreateArticleInputDto.Title">
+            <summary>
+            title
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.CreateArticleInputDto.Cover">
+            <summary>
+            cover
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.CreateArticleInputDto.Content">
+            <summary>
+            content
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.CreateArticleInputDto.Tag">
+            <summary>
+            categoru
+            </summary>
+        </member>
+        <member name="T:SwiftCode.BBS.Model.ViewModels.Article.UpdateArticleInputDto">
+            <summary>
+            update a article
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.UpdateArticleInputDto.Title">
+            <summary>
+            title
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.UpdateArticleInputDto.Cover">
+            <summary>
+            cover
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.UpdateArticleInputDto.Content">
+            <summary>
+            content
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Article.UpdateArticleInputDto.Tag">
+            <summary>
+            teg
+            </summary>
+        </member>
+        <member name="T:SwiftCode.BBS.Model.ViewModels.Question.CreateQuestionCommentsInputDto">
+            <summary>
+            comment of a question
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Question.CreateQuestionCommentsInputDto.Content">
+            <summary>
+            content of question comment
+            </summary>
+        </member>
+        <member name="T:SwiftCode.BBS.Model.ViewModels.Question.CreateQuestionInputDto">
+            <summary>
+            view model when create a question
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Question.CreateQuestionInputDto.Title">
+            <summary>
+            title 
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Question.CreateQuestionInputDto.Content">
+            <summary>
+            content
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Question.CreateQuestionInputDto.Tag">
+            <summary>
+            category
+            </summary>
+        </member>
+        <member name="T:SwiftCode.BBS.Model.ViewModels.Question.QuestionCommentDto">
+            <summary>
+            question comment
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Question.QuestionCommentDto.Content">
+             <summary>
+            content of comment
+             </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Question.QuestionCommentDto.CreateTime">
+            <summary>
+            create time
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Question.QuestionCommentDto.IsAdoption">
+            <summary>
+            if is adoptin by submitter of question
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Question.QuestionCommentDto.CreateUserId">
+            <summary>
+            who created
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Question.QuestionCommentDto.UserName">
+            <summary>
+            user name
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Question.QuestionCommentDto.Avatar">
+            <summary>
+            image
+            </summary>
+        </member>
+        <member name="T:SwiftCode.BBS.Model.ViewModels.Question.QuestionDetailsDto">
+            <summary>
+            question details
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Question.QuestionDetailsDto.Title">
+            <summary>
+            title
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Question.QuestionDetailsDto.Tag">
+            <summary>
+            category
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Question.QuestionDetailsDto.QuestionCommentCount">
+            <summary>
+            count of comments
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Question.QuestionDetailsDto.CreateTime">
+            <summary>
+            create time
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Question.QuestionDetailsDto.QuestionComments">
+            <summary>
+            list of comments
+            </summary>
+        </member>
+        <member name="T:SwiftCode.BBS.Model.ViewModels.Question.QuestionDto">
+            <summary>
+            question view model
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Question.QuestionDto.Title">
+            <summary>
+            title
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Question.QuestionDto.Tag">
+            <summary>
+            category
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Question.QuestionDto.CreateTime">
+            <summary>
+            create time
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Question.QuestionDto.CreateUserId">
+            <summary>
+            who create this question
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Question.QuestionDto.QuestionCommentCount">
+            <summary>
+            count of comments
+            </summary>
+        </member>
+        <member name="T:SwiftCode.BBS.Model.ViewModels.Question.UpdateQuestionInputDto">
+            <summary>
+            update question view model
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Question.UpdateQuestionInputDto.Title">
+            <summary>
+            title
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Question.UpdateQuestionInputDto.Content">
+            <summary>
+            content
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.Question.UpdateQuestionInputDto.Tag">
+            <summary>
+            category
+            </summary>
+        </member>
+        <member name="T:SwiftCode.BBS.Model.ViewModels.UserInfo.CreateUserInfoInputDto">
+            <summary>
+            Dto used for creating a new user
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.UserInfo.CreateUserInfoInputDto.UserName">
+            <summary>
+            user name
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.UserInfo.CreateUserInfoInputDto.LoginName">
+            <summary>
+            login name
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.UserInfo.CreateUserInfoInputDto.LoginPassWord">
+            <summary>
+            password
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.UserInfo.CreateUserInfoInputDto.Phone">
+            <summary>
+            phone number
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.UserInfo.CreateUserInfoInputDto.Introduction">
+            <summary>
+            summary
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.UserInfo.CreateUserInfoInputDto.Email">
+            <summary>
+            email
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.UserInfo.CreateUserInfoInputDto.Avator">
+            <summary>
+            image
+            </summary>
+        </member>
+        <member name="T:SwiftCode.BBS.Model.ViewModels.UserInfo.UpdateUserInfoInputDto">
+            <summary>
+            which field can be updated
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.UserInfo.UpdateUserInfoInputDto.Introduction">
+            <summary>
+            personal summary
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.UserInfo.UpdateUserInfoInputDto.Email">
+            <summary>
+            email
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.UserInfo.UpdateUserInfoInputDto.Avator">
+            <summary>
+            image
+            </summary>
+        </member>
+        <member name="T:SwiftCode.BBS.Model.ViewModels.UserInfo.UserInfoDetailsDto">
+            <summary>
+            User information related dto
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.UserInfo.UserInfoDetailsDto.UserName">
+            <summary>
+            user name
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.UserInfo.UserInfoDetailsDto.Phone">
+            <summary>
+            phone number
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.UserInfo.UserInfoDetailsDto.Introduction">
+            <summary>
+            personal summary
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.UserInfo.UserInfoDetailsDto.Email">
+            <summary>
+            email
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.UserInfo.UserInfoDetailsDto.Avatar">
+            <summary>
+            image
+            </summary>
+        </member>
+        <member name="T:SwiftCode.BBS.Model.ViewModels.UserInfo.UserInfoDto">
+            <summary>
+            User article related DTO
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.UserInfo.UserInfoDto.UserName">
+            <summary>
+            user
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.UserInfo.UserInfoDto.Avatar">
+            <summary>
+            image
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.UserInfo.UserInfoDto.ArticleCount">
+            <summary>
+            how many articles under this user
+            </summary>
+        </member>
+        <member name="P:SwiftCode.BBS.Model.ViewModels.UserInfo.UserInfoDto.QuestionCount">
+            <summary>
+            how many questions under this user
             </summary>
         </member>
         <member name="T:SwiftCode.BBS.API.WeatherForecast">

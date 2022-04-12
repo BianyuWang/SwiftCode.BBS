@@ -1,15 +1,15 @@
-using SwiftCode.BBS.Model.Models.RootKey;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SwiftCode.BBS.Model.ViewModels.UserInfo;
 
-namespace SwiftCode.BBS.Model.Models
+namespace SwiftCode.BBS.Model.ViewModels.Article
 {/// <summary>
-/// artical on BBS
+/// article details 
 /// </summary>
-  public  class Article: RootEntityTKey<int>
+    public class ArticleDetailsDto
     {
         /// <summary>
         /// title
@@ -28,7 +28,7 @@ namespace SwiftCode.BBS.Model.Models
         /// </summary>
         public string Tag { get; set; }
         /// <summary>
-        /// count of traffic4
+        /// count of traffic
         /// </summary>
         public int Traffic { get; set; }
         /// <summary>
@@ -36,21 +36,16 @@ namespace SwiftCode.BBS.Model.Models
         /// </summary>
         public DateTime CreateTime { get; set; }
         /// <summary>
-        /// create by user id
+        /// by user id
         /// </summary>
         public int CreateUserId { get; set; }
+ 
         /// <summary>
-        /// create by user
+        /// list of comments
         /// </summary>
-        public virtual UserInfo CreateUser { get; set; }
-        /// <summary>
-        /// collected by user
-        /// </summary>
-        public virtual ICollection<UserCollectionArticle> CollectionArticles { get; set; } = new List<UserCollectionArticle>();
-        /// <summary>
-        /// commented by user
-        /// </summary>
-        public virtual ICollection<ArticleComment> ArticleComments { get; set; } = new List<ArticleComment>();
+        public List<ArticleCommentDto> ArticleComments { get; set; }
+
+
 
     }
 }
