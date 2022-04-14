@@ -96,9 +96,33 @@ namespace SwiftCode.BBS.API.Controllers
 
         }
 
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        ///// <returns></returns>
+        //[HttpGet]
+
+        //public async Task<MessageModel<long>> GetCount()
+        //{
+        //    var totalCount = await _articleService.GetCountAsync();
+        //    return new MessageModel<long>()
+        //    {
+        //        success = true,
+        //        msg = "Get success",
+        //        response = totalCount
+        //    };
+
+
+        //}
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ArticleInput"></param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<MessageModel<string>> CreateAsunc(CreateArticleInputDto ArticleInput)
         {
+            var tount = await _articleService.GetCountAsync();
             var token = JWTHelper.ParsingJwtToken(HttpContext);
             var entity = _mapper.Map<Article>(ArticleInput);
             entity.CreateTime = DateTime.Now;

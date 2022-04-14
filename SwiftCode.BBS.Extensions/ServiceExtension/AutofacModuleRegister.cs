@@ -1,4 +1,5 @@
 using Autofac;
+using SwiftCode.BBS.Extensions.AOP;
 using SwiftCode.BBS.IRepositories.Base;
 using SwiftCode.BBS.IServices.Base;
 using SwiftCode.BBS.Repositories.Base;
@@ -41,7 +42,7 @@ namespace SwiftCode.BBS.Extensions.ServiceExtension
             var assemblysServices = Assembly.Load("SwiftCode.BBS.Services"); //important!!! not interface
             builder.RegisterAssemblyTypes(assemblysServices).AsImplementedInterfaces();
 
-
+            builder.RegisterType<BBSLogAOP>();
 
             var assemblysRepository = Assembly.Load("SwiftCode.BBS.Repositories");
             builder.RegisterAssemblyTypes(assemblysRepository)

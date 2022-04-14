@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwiftCode.BBS.Common", "Swi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwiftCode.BBS.EntityFramework", "SwiftCode.BBS.EntityFramework\SwiftCode.BBS.EntityFramework.csproj", "{226D40BA-B2ED-4273-BEAE-D34ED486138B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftCode.BBS.Extensions", "SwiftCode.BBS.Extensions\SwiftCode.BBS.Extensions.csproj", "{D36E259B-8070-49C8-AA21-EBACD5513103}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwiftCode.BBS.Extensions", "SwiftCode.BBS.Extensions\SwiftCode.BBS.Extensions.csproj", "{D36E259B-8070-49C8-AA21-EBACD5513103}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftCode.BBS.Tests", "SwiftCode.BBS.Tests\SwiftCode.BBS.Tests.csproj", "{2427C383-700E-4829-A154-4DC0631ED4CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{D36E259B-8070-49C8-AA21-EBACD5513103}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D36E259B-8070-49C8-AA21-EBACD5513103}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D36E259B-8070-49C8-AA21-EBACD5513103}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2427C383-700E-4829-A154-4DC0631ED4CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2427C383-700E-4829-A154-4DC0631ED4CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2427C383-700E-4829-A154-4DC0631ED4CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2427C383-700E-4829-A154-4DC0631ED4CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

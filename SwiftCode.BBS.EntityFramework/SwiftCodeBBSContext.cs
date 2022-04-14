@@ -11,10 +11,7 @@ namespace SwiftCode.BBS.EntityFramework
 {
    public class SwiftCodeBBSContext :DbContext
     {
-        public SwiftCodeBBSContext()
-        {
-
-        }
+     
         public SwiftCodeBBSContext(DbContextOptions<SwiftCodeBBSContext> options )
             :base(options)
         {
@@ -80,12 +77,12 @@ namespace SwiftCode.BBS.EntityFramework
             advertisementCfg.Property(p => p.Url).HasMaxLength(128);
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder
-                .UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MySwiftCodeBBS;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
-                .LogTo(Console.WriteLine, LogLevel.Information);
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder
+        //        .UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MySwiftCodeBBS;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
+        //        .LogTo(Console.WriteLine, LogLevel.Information);
+        //}
     }
 
     }

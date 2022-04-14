@@ -40,5 +40,13 @@ namespace SwiftCode.BBS.Services
             }
             return entity;
         }
+
+        public async Task AdditionalItemAsync(Article entity, bool v, int n = 0)
+        {
+
+            entity.CreateTime = DateTime.Now.AddDays(-n);
+            await _articleRepository.InsertAsync(entity, true);
+        
+        }
     }
 }

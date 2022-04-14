@@ -19,6 +19,13 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:SwiftCode.BBS.API.Controllers.ArticleController.CreateAsunc(SwiftCode.BBS.Model.ViewModels.Article.CreateArticleInputDto)">
+            <summary>
+            
+            </summary>
+            <param name="ArticleInput"></param>
+            <returns></returns>
+        </member>
         <member name="M:SwiftCode.BBS.API.Controllers.LoginController.GetJwtStr(System.String,System.String)">
             <summary>
             获取Jwt令牌
