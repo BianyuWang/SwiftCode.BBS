@@ -46,6 +46,7 @@ namespace SwiftCode.BBS.API.Controllers
             var entityList = await _articleService.GetPagedListAsync(page, pageSize, nameof(Article.CreateTime));
             var articleUserIdList = entityList.Select(a => a.CreateUserId);
             var userList = await _articleService.GetListAsync(a => articleUserIdList.Contains(a.Id));
+            var testList = await _articleService.GetListAsync(a => a.Id == 3);
             var respose = _mapper.Map<List<ArticleDto>>(entityList);
             if (respose.Count == 0)
             {
